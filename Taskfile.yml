@@ -1,0 +1,12 @@
+version: '3'
+
+output: prefixed
+
+tasks:
+  lint:
+    - poetry run ruff check
+    - poetry run ruff format --check
+
+  fmt:
+    - poetry run ruff check --fix
+    - poetry run ruff format
